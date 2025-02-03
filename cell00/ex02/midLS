@@ -1,1 +1,2 @@
-ls | paste -sd ','
+echo "$(ls | paste -sd ',')$"
+
