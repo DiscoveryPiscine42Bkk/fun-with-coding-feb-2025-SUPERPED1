@@ -1,1 +1,1 @@
-ls | paste -sd ','[D '
+ls | paste -sd ','
