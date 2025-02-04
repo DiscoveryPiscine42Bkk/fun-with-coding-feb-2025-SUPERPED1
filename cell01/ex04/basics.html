@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        .title_h1{
+            text-align: center;
+            color: white;
+        }
+        .img_show{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto 1em;
+            margin: 20px;
+        }
+        .img1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .img2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .img2 > img{
+            max-width: 300px;
+        } 
+        .gglink{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            
+            text-align: center;
+            font-size: 24px;
+        }
+        .ytlink{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            
+            text-align: center;
+            font-size: 24px;
+        }
+        .copy{
+            text-align: right;
+            font-family: monospace;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title_h1">so bigger@</h1>
+    <div class="img_show">
+        <div class="img1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSua7o13hCS1lopLSoAf5zJA1f69XVh4p7w0A&s" alt="">
+        </div>
+        <div class="img2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="">
+        </div>
+        <div class="gglink">
+            <a href="http://google.com">Google</a>
+        </div>
+        <div class="ytlink">
+            <a href="http://youtube.com">Youtube</a>
+        </div>
+    </div>
+    <hr>
+    <p class="copy">© slaungwi 2025</p>
+</body>
+</html>
