@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgroound</title>
+    <link rel="stylesheet" href="./backgroound.css">
+</head>
+<body>
+    <button id="bt" type="button">Press me</button>
+    <script>
+        let clickCount = 0;
+        const button = document.getElementById("bt");
+        const body = document.body;
+
+        button.addEventListener("click", function() {
+            clickCount++;
+
+            if (clickCount === 1) {
+                button.style.fontSize = "20px";
+                button.style.padding = "15px 30px";
+                body.style.backgroundColor = "green";
+            } else if (clickCount === 2) {
+                button.style.fontSize = "24px";
+                button.style.padding = "20px 40px";
+                body.style.backgroundColor = "maroon";
+            } else {
+                clickCount = 0;
+                button.style.fontSize = "16px";
+                button.style.padding = "10px 20px";
+                body.style.backgroundColor = "white";
+            }
+        });
+    </script>
+</body>
+</html>
