@@ -4,7 +4,7 @@ body{
 }
 .box {
     position: relative;
-    width: 100vw; /* Adjust as needed */
+    width: 100vw;
 }
 .box img {
     width: 100%;
