@@ -2,7 +2,8 @@
 table{
     height: 200px;
     border: 2px solid black;
-    width:100%
+    width: 100vw;
+    height: 100vh; 
 }
 td{
     max-width: 50%; 
