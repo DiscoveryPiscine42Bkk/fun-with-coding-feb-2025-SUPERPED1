@@ -1,10 +1,10 @@
 function getTodos() {
-    return document.cookie.split('; ').find(row => row.startsWith('todos='))?.split('=')[1] || '';
+    return decodeURIComponent(document.cookie.split('; ').find(row => row.startsWith('todos='))?.split('=')[1] || '');
 }
 
 function saveTodos() {
     let todos = Array.from(document.querySelectorAll('.todo')).map(todo => todo.innerText);
-    document.cookie = `todos=${encodeURIComponent(todos.join('|'))};path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+    document.cookie = `todos=${encodeURIComponent(todos.join(','))};path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT`;
 }
 
 function addTodo() {
@@ -32,7 +32,7 @@ function removeTodo(todo) {
 function loadTodos() {
     let savedTodos = getTodos();
     if (savedTodos) {
-        savedTodos.split('|').forEach(text => {
+        savedTodos.split(',').forEach(text => {
             let div = document.createElement("div");
             div.className = "todo";
             div.innerText = text;
