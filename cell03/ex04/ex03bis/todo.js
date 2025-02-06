@@ -1,12 +1,17 @@
 function getTodos() {
-    return decodeURIComponent(document.cookie.split('; ').find(row => row.startsWith('todos='))?.split('=')[1] || '');
+    // data todos=man,mon,mans;path=/;expires....
+    // will become todos=man,mon,mans, path=/, expires.... when using split(';')
+    let a = document.cookie.split(';')[0];
+    let b = a.split('=')[1];
+    return b
 }
 
 function saveTodos() {
     let todos = $('.todo').map(function(){
         return $(this).text();
-    }).get();
-    document.cookie = `todos=${encodeURIComponent(todos.join(','))};path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+    }).get(); // Crete 1 array set contain todo list
+    document.cookie = `todos=${todos.join(',')};path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+    // Ex data todos=man,mon,mans;path=/;expires....
 }
 
 function addTodo() {
@@ -16,7 +21,6 @@ function addTodo() {
         // Create box contain to do list
         let div = $('<div class="todo"></div>').text(text);
         div.click( function() { removeTodo(div); });
-        let list = document.getElementById("ft_list");
         $('#ft_list').prepend(div);
         saveTodos();
     }
@@ -31,6 +35,7 @@ function removeTodo(todo) {
 
 function loadTodos() {
     let savedTodos = getTodos();
+    alert(savedTodos);
     if (savedTodos) {
         savedTodos.split(',').forEach(text => {
             let div = $('<div class="todo"></div>').text(text);
