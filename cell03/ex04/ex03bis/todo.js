@@ -35,7 +35,6 @@ function removeTodo(todo) {
 
 function loadTodos() {
     let savedTodos = getTodos();
-    alert(savedTodos);
     if (savedTodos) {
         savedTodos.split(',').forEach(text => {
             let div = $('<div class="todo"></div>').text(text);
