@@ -8,6 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Main</title>
     <style>
+        @keyframes color_chage {
+            0%   {color:red;}
+            25%  {color:yellow;}
+            50%  {color:white;}
+            75%  {color:rgb(104, 255, 137);}
+            100% {color:red;}
+        }
         body {
             font-family: "Oswald", serif;
 
@@ -16,7 +23,6 @@
             background-size: cover;
             background-position: center;
 
-            text-align: center;
             color: aliceblue;
 
             margin: 0;
@@ -29,6 +35,9 @@
             height: 100vh;
         }
         h1 {
+            animation-name: color_chage;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
             font-size: 56px;
             margin: 40px 20px;
         }
@@ -46,13 +55,23 @@
             box-shadow: 5px 10px #88888883;
             border-radius: 10px;
         }
+
+        img:hover{
+            width: 420px;
+            height: 420px;
+        }
         
         @media (max-width: 768px) {
             h1 {
                 font-size: 36px;
             }
             img {
-                max-width: 300px;
+                width: 200px;
+                height: 200px;
+            }
+            img:hover{
+                width: 220px;
+                height: 220px;
             }
         }
         
@@ -61,7 +80,8 @@
                 font-size: 28px;
             }
             img {
-                max-width: 250px;
+                max-width: 100px;
+                max-height: 100px;
             }
         }
     </style>
