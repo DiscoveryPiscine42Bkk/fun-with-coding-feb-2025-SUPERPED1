@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ดึงฟอนท์มาใช้ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <title>My Profile</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="text-nav">SUPERPED</h1>
+        <div class="menu-toggle">&#9776;</div>
+        <div class="link-nav">
+            <a class="nav-info" href="#Home">Home</a>
+            <a class="nav-info" href="#About">About</a>
+            <a class="nav-info" href="#Activity">Activity</a>
+            <a class="nav-info" href="#Contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="Home" id="Home">
+        <h1 class="home-text">Welcome to my portfolio website!!</h1>
+    </div>
+
+    <div class="About" id="About">
+        <img class="pic" src="./IMG/My_pic.jpg" alt="Profile Picture">
+        <div class="name_about">
+            <p>My name is</p>
+            <h1>Sorawit Laungwilawan</h1>
+        </div>
+        <div class="content_about">
+            <p>"Sleep and Sleep"</p>
+            <p>I'm currently studying at KMITL in Engineering (Bachelor’s Degree)</p>
+            <p>Skill : HTML,CSS,Javascript,Python</p>
+        </div> 
+    </div>
+
+    <div class="Activity" id="Activity">
+        <h1>Activity</h1>
+        <div class="img_g">
+            <img class="cert_img" src="./IMG/cert.png" alt="cert">
+            <img class="cert_img" src="./IMG/cert.png" alt="cert">
+            <img class="cert_img" src="./IMG/cert.png" alt="cert">
+            <img class="cert_img" src="./IMG/cert.png" alt="cert">  
+        </div>
+    </div>
+
+    <div class="Contact" id="Contact">
+        <div class="lg_group">
+            <a href="https://www.instagram.com/walls_wish">
+                <img class="logo" src="./IMG/ig_lg.png" alt="ig">
+            </a>
+            <a href="https://github.com/DiscoveryPiscine42Bkk/fun-with-coding-feb-2025-SUPERPED1">
+                <img class="logo" src="./IMG/gh_lg.png" alt="github">
+            </a>
+            <a href="https://www.line.me/th/">
+                <img class="logo" src="./IMG/ling_lg.png" alt="line">
+            </a>
+        </div>
+        
+        <div class="text_contact">
+            <p>Email: 65011080@kmitl.ac.th</p>
+            <p>Phone: +66 xx-xxx-xxxx</p>
+            <p>City: Bangkok, Thailand</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.link-nav').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

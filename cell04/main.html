@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Main</title>
+    <style>
+        body {
+            font-family: "Oswald", serif;
+
+            background-image: url('./IMG/bg_main.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            text-align: center;
+            color: aliceblue;
+
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 56px;
+            margin: 40px 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 2px solid #000000;
+            box-shadow: 5px 10px #88888883;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            img {
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+            img {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to our world!!</h1>
+    <div class="image-container">
+        <a href="./rush-ject.html">
+            <img src="./IMG/bimu.png" alt="">
+        </a>
+        <a href="./port.html">
+            <img src="./IMG/My_pic.jpg" alt="">
+        </a>
+    </div>
+</body>
+</html>
